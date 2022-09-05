@@ -1,0 +1,4 @@
+[submodule "addons_submodules/advanced_list_search"]
+	path = addons_submodules/advanced_list_search
+	url = git@github.com:opsway/advanced_list_search.git
+	branch = 15.0
