@@ -2,3 +2,6 @@
 	path = addons_submodules/advanced_list_search
 	url = git@github.com:opsway/advanced_list_search.git
 	branch = 15.0
+[submodule "addons_submodules/pos_cardknox"]
+	path = addons_submodules/pos_cardknox
+	url = git@github.com:opsway/pos_cardknox.git

@@ -1,0 +1,30 @@
+version: '3'
+services:
+  adv-tree-web:
+    container_name: adv-tree-web
+    image: adv_tree_web
+    build: ../..
+    user: odoo
+    depends_on:
+      -   adv-tree-db
+    ports:
+      - "8129:8069"
+    volumes:
+      - ../../addons:/mnt/extra-addons
+      - ./odoo.conf:/etc/odoo/odoo.conf
+    environment:
+      - HOST=adv-tree-db
+      - USER=odoo
+      - PASSWORD=myodoo
+      - ODOO_STAGE=dev
+  adv-tree-db:
+    container_name: adv-tree-db
+    ports:
+      - "5442:5432"
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=myodoo
+      - POSTGRES_DB=postgres
+    volumes:
+      - /var/lib/postgresql/data
