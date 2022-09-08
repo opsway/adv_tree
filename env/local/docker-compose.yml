@@ -10,7 +10,7 @@ services:
     ports:
       - "8129:8069"
     volumes:
-      - ../../addons:/mnt/extra-addons
+      - ../../addons_submodules:/mnt/extra-addons
       - ./odoo.conf:/etc/odoo/odoo.conf
     environment:
       - HOST=adv-tree-db
